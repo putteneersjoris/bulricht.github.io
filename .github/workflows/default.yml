@@ -4,14 +4,15 @@ on:
     branches:
       - cicd-dev
 jobs:
-  build-test-deploy:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: Generate data.js
       - run: python data.py
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v1
+      - name: Deploy to Github Pages
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
           build_dir: build
