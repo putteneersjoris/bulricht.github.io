@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Generate data.js
-        run: python src/data.py
+        run: python pkg/data.py
       - name: Deploy to Github Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
