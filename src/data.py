@@ -1,5 +1,5 @@
 import os
-path = "./data"
+path = "./src/data"
 with open("data.js", "w", encoding="utf8") as f:
     items = os.listdir(path)
     f.write("var imageUrls = [\n")
