@@ -1,6 +1,7 @@
 import os
-path = "./src/data"
-with open("data.js", "w", encoding="utf8") as f:
+parent = "./src"
+path = f"{parent}/data"
+with open(f"{parent}/data.js", "w", encoding="utf8") as f:
     items = os.listdir(path)
     f.write("var imageUrls = [\n")
     for item in items:
