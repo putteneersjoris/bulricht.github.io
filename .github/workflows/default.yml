@@ -2,7 +2,7 @@ name: default
 on:
   push:
     branches:
-      - cicd-dev
+      - master
 jobs:
   publish:
     runs-on: ubuntu-latest
